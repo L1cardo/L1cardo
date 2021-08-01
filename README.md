@@ -44,6 +44,6 @@ I love programming and I love Swift.
 
 ### My GitHub Contributions
 
-![](https://raw.githubusercontent.com/L1cardo/L1cardo/main/github-contribution-grid-snake.svg)
+![](https://raw.githubusercontent.com/L1cardo/L1cardo/main/assets/github-contribution-grid-snake.svg)
 
 ⭐️ From [L1cardo](https://github.com/L1cardo)
