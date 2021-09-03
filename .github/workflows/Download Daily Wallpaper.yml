@@ -23,10 +23,8 @@ jobs:
    
       - name: Download Unslpash daily image
         run: |
-          npm i -g unsplash-wallpaper
           cd ./assets/
-          unsplash-wallpaper --featured wallpapers --daily --width 4096 --height 2160
-          mv -f wallpaper-photo*.jpg unsplash_wallpaper.jpg
+          curl "https://source.unsplash.com/featured/4096x2160/daily" -o "unsplash_wallpaper.jpg"
           
       - name: Download Bing wallpaper
         run: |
