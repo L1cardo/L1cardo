@@ -26,7 +26,8 @@ jobs:
           npm i -g unsplash-wallpaper
           cd ./assets/
           unsplash-wallpaper --featured --search wallpapers --daily --width 4096 --height 2160
-          mv -f wallpaper-photo*.jpg unsplash_wallpaper.jpg
+          mv -f wallpaper*.jpg unsplash_wallpaper.jpg
+          
       - name: Download Bing wallpaper
         run: |
           cd ./assets/
