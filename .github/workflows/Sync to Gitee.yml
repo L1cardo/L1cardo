@@ -15,7 +15,7 @@ jobs:
       uses: yi-Xu-0100/repo-list-generator@main
       with:
         user: l1cardo
-        my_token: ${{ secrets.GITHUB_TOKEN }}
+        my_token: ${{ secrets.G_T }}
       
     - name: Sync to Gitee
       uses: Yikun/hub-mirror-action@master
