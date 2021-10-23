@@ -16,8 +16,8 @@ jobs:
     - name: Sync to Gitee
       uses: Yikun/hub-mirror-action@master
       with:
-        src: github/L1cardo
-        dst: gitee/Licardo
+        src: github/l1cardo
+        dst: gitee/l1cardo
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
         clone_style: "ssh"
