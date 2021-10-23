@@ -10,8 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout source codes
-      uses: actions/checkout@v2
+    - name: Generate repo list
+      id: repo
+      uses: yi-Xu-0100/repo-list-generator@main
+      with:
+        user: l1cardo
+        my_token: ${{ secrets.GITHUB_TOKEN }}
       
     - name: Sync to Gitee
       uses: Yikun/hub-mirror-action@master
@@ -20,6 +24,7 @@ jobs:
         dst: gitee/l1cardo
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
+        static_list: '${{ steps.repo.outputs.repoList }}'
         clone_style: "ssh"
         force_update: true
         debug: true
