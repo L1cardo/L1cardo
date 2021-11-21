@@ -1,4 +1,4 @@
-![me](https://cdn.jsdelivr.net/gh/L1cardo/L1cardo@main/me.gif)
+![me](https://github.com/L1cardo/L1cardo/raw/main/me.gif)
 
 <a href="https://github.com/L1cardo/iBeats"><img align="right" width="150px" src="https://raw.githubusercontent.com/L1cardo/iBeats/main/files/heart.svg"/></a>
 ## Hey 👋, I'm Albert Abdilim
