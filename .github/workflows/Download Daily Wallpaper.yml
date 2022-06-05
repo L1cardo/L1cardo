@@ -36,7 +36,7 @@ jobs:
           cp bing_wallpaper_4k.jpg bing_wallpaper_1080p.jpg
       
       - name: Resize Images
-        uses: gonzalonaveira/gh-image-resizing@1
+        uses: gonzalonaveira/gh-image-resizing@v1
         with:
           IMAGES_MAX_WIDTH: "1920"
           IMAGES_FORMATS: "jpg, jpge, png" 
