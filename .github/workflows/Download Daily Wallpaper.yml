@@ -27,14 +27,21 @@ jobs:
           cd ./assets/
           unsplash-wallpaper --featured --search wallpapers --daily --width 4096 --height 2160
           mv -fv wallpaper-photo*.jpg unsplash_wallpaper_4k.jpg
-          unsplash-wallpaper --featured --search wallpapers --daily --width 1920 --height 1080
-          mv -fv wallpaper-photo*.jpg unsplash_wallpaper_1080p.jpg
+          cp unsplash_wallpaper_4k.jpg unsplash_wallpaper_1080p.jpg
           
       - name: Download Bing wallpaper
         run: |
           cd ./assets/
           curl "https://bing.ioliu.cn/v1/rand?w=4096&h=2160" -o "bing_wallpaper_4k.jpg"
-          curl "https://bing.ioliu.cn/v1/rand?w=1920&h=1080" -o "bing_wallpaper_1080p.jpg"
+          cp bing_wallpaper_4k.jpg bing_wallpaper_1080p.jpg
+      
+      - name: Resize Images
+        uses: gonzalonaveira/gh-image-resizing@master
+        with:
+          IMAGES_MAX_WIDTH: "1920"
+          IMAGES_FORMATS: "jpg, jpge, png" 
+          IMAGES_DIRECTORIES: "./assets/"
+          IMAGES_SUFFIX: "1080p"
           
       - name: Push to GitHub
         uses: EndBug/add-and-commit@v7
