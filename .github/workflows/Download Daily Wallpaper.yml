@@ -28,13 +28,13 @@ jobs:
           unsplash-wallpaper --featured --search wallpapers --daily --width 4096 --height 2160
           mv -fv wallpaper-photo*.jpg unsplash_wallpaper_4k.jpg
           mkdir cache
-          cp unsplash_wallpaper_4k.jpg ./assets/cache/unsplash_wallpaper_1080p.jpg
+          cp unsplash_wallpaper_4k.jpg cache/unsplash_wallpaper_1080p.jpg
           
       - name: Download Bing wallpaper
         run: |
           cd ./assets/
           curl "https://bing.ioliu.cn/v1/rand?w=4096&h=2160" -o "bing_wallpaper_4k.jpg"
-          cp bing_wallpaper_4k.jpg ./assets/cache/bing_wallpaper_1080p.jpg
+          cp bing_wallpaper_4k.jpg cache/bing_wallpaper_1080p.jpg
       
       - name: Resize Images
         uses: gonzalonaveira/gh-image-resizing@master
@@ -45,9 +45,8 @@ jobs:
       
       - name: Delete Cache
         run: |
-          cd ./assets/cache/
-          mv -fv unsplash_wallpaper_1080p.jpg ./assets/unsplash_wallpaper_1080p.jpg
-          mv -fv bing_wallpaper_1080p.jpg ./assets/bing_wallpaper_1080p.jpg
+          mv -fv ./assets/cache/unsplash_wallpaper_1080p.jpg ./assets/unsplash_wallpaper_1080p.jpg
+          mv -fv ./assets/cache/bing_wallpaper_1080p.jpg ./assets/bing_wallpaper_1080p.jpg
           rm -rf ./assets/cache
           
       - name: Push to GitHub
