@@ -39,7 +39,7 @@ jobs:
         uses: gonzalonaveira/gh-image-resizing@master
         with:
           IMAGES_MAX_WIDTH: "1920"
-          IMAGES_FORMATS: "png" 
+          IMAGES_FORMATS: "jpg, jpge, png"
           IMAGES_DIRECTORIES: "./assets/cache/"
       
       - name: Delete Cache
