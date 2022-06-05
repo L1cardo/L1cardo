@@ -27,6 +27,7 @@ jobs:
           cd ./assets/
           unsplash-wallpaper --featured --search wallpapers --daily --width 4096 --height 2160
           mv -fv wallpaper-photo*.jpg unsplash_wallpaper_4k.jpg
+          mkdir ./assets/cache/
           cp unsplash_wallpaper_4k.jpg ./assets/cache/unsplash_wallpaper_1080p.jpg
           
       - name: Download Bing wallpaper
