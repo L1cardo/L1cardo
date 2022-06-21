@@ -25,15 +25,3 @@ jobs:
         clone_style: "ssh"
         force_update: true
         debug: true
-        
-    - name: Sync to Gitee
-      uses: Yikun/hub-mirror-action@master
-      with:
-        src: betaflight/betaflight
-        dst: gitee/l1cardo
-        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-        dst_token:  ${{ secrets.GITEE_TOKEN }}
-        static_list: "firmware-presets"
-        clone_style: "https"
-        force_update: true
-        debug: true
