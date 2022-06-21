@@ -1,4 +1,4 @@
-name: Sync to Gitee
+name: Sync BF Presets to Gitee
 
 on:
   schedule:
