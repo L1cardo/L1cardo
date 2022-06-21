@@ -13,8 +13,7 @@ jobs:
     - name: Sync to Gitee
       uses: Yikun/hub-mirror-action@master
       with:
-        src: betaflight/betaflight
-        src_account_type: org
+        src: github/betaflight
         dst: gitee/l1cardo
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
