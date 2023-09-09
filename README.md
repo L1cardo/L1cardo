@@ -36,7 +36,7 @@ I love programming and I love Swift.
 - Email: [![Email](https://img.shields.io/badge/albert.abdilim@foxmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:albert.abdilim@foxmail.com)
 
 ### I like running
-[![running](https://cdn.jsdelivr.net/gh/L1cardo/running_page@master/assets/github.svg)](https://running-page.l1cardo.vercel.app)
+[![running](https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/running_page/gh-pages/static/assets/github.svg)](https://run.licardo.cn)
 
 ### My GitHub Contributions
 
