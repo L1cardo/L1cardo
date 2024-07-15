@@ -21,14 +21,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
    
-      - name: Download Unslpash daily image
-        run: |
-          npm i -g unsplash-wallpaper
-          cd ./assets/
-          unsplash-wallpaper --featured --search wallpapers --daily --width 4096 --height 2160
-          mv -fv wallpaper-photo*.jpg unsplash_wallpaper_4k.jpg
-          unsplash-wallpaper --featured --search wallpapers --daily --width 1920 --height 1080
-          mv -fv wallpaper-photo*.jpg unsplash_wallpaper_1080p.jpg
+      # - name: Download Unslpash daily image
+      #   run: |
+      #     npm i -g unsplash-wallpaper
+      #     cd ./assets/
+      #     unsplash-wallpaper --featured --search wallpapers --daily --width 4096 --height 2160
+      #     mv -fv wallpaper-photo*.jpg unsplash_wallpaper_4k.jpg
+      #     unsplash-wallpaper --featured --search wallpapers --daily --width 1920 --height 1080
+      #     mv -fv wallpaper-photo*.jpg unsplash_wallpaper_1080p.jpg
           
       - name: Download Bing wallpaper
         run: |
