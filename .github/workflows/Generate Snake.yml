@@ -22,10 +22,12 @@ jobs:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             ./assets/github-contribution-grid-snake.svg
-            ./assets/github-contribution-grid-snake-dark.gif
+            ./assets/github-contribution-grid-snake-dark.svg?palette=github-dark
+            ./assets/github-contribution-grid-snake.gif
+            ./assets/github-contribution-grid-snake-dark.gif?palette=github-dark
 
       - name: Push to GitHub
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message:: 'Generate Contribution Snake'
+          commit_message: 'Generate Contribution Snake'
           branch: main
