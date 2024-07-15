@@ -37,7 +37,7 @@ jobs:
           wget "https://bingw.jasonzeng.dev/?resolution=1920x1080" -O "bing_wallpaper_1080p.jpg"
           
       - name: Push to GitHub
-        uses: EndBug/add-and-commit@v7
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
+          commit_message:: 'Download Daily Wallpaper'
           branch: main
-          message: 'Download Daily Wallpaper'
